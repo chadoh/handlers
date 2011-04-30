@@ -2,8 +2,8 @@
 # project in your rails apps through git.
 Gem::Specification.new do |s|
   s.name = "handlers"
-  s.summary = "Insert Handlers summary."
-  s.description = "Insert Handlers description."
+  s.summary = "Handlers for markdown and merb templates."
+  s.description = "'.merb' templates are markdown with erb interspersed. Markdown compilation is done with Redcarpet."
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.rdoc"]
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 end

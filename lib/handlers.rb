@@ -2,11 +2,6 @@ require "action_view/template"
 require "redcarpet"
 require "handlers/railtie"
 
-ActionView::Template.register_template_handler :rb, :source.to_proc
-
-ActionView::Template.register_template_handler :string,
-  lambda {|template| "%Q{#{template.source}}" }
-
 ActionView::Template.register_template_handler :md,
   lambda {|template| "Redcarpet.new(#{template.source.inspect}).to_html" }
 
