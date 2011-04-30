@@ -1,3 +1,16 @@
-<%= class_name %>#<%= @action %>
+<%= title = "#{class_name}##{@action}" %>
+<%= "=" * title.length %>
 
-<%%= @greeting %>, find me in app/views/<%= @path %>
+<%%= @greeting %>, find me in `app/views/<%= @path %>`
+
+To have this compile to both the text and html part of your email, be
+sure to do the following:
+
+    # app/mailers/<%= class_name.downcase %>.rb
+
+    def <%= @action %>
+      mail(:to => "whoever@example.com") do |format|
+        format.html
+        format.text
+      end
+    end

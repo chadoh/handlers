@@ -13,4 +13,15 @@ fantastic for mailers.
 
 And in fact, since it's so perfect for mailers, this gem also includes a
 mailer generator, and sets it as the default. Who wants to maintain both
-an html and text part of an email? Not me.
+an html and text part of an email? Not me. To have your .merb template
+compile to both text and html, you'll have to specify your mail formats
+in your app/mailers/my_sweet_mailer.rb like so:
+
+```` ruby
+def welcome_email(user)
+  mail(:to => user.email) do |format|
+    format.html
+    format.text
+  end
+end
+````
