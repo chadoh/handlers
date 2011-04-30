@@ -6,4 +6,6 @@ Gem::Specification.new do |s|
   s.description = "'.merb' templates are markdown with erb interspersed. Markdown compilation is done with Redcarpet."
   s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.md"]
   s.version = "0.0.3"
+
+  s.add_dependency 'redcarpet', '~> 1.12.0'
 end
